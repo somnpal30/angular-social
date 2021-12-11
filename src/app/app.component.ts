@@ -38,6 +38,8 @@ export class AppComponent {
   }
 
   logOut(): void {
-    this.socialAuthService.signOut();
+    this.socialAuthService.signOut(true).then(value => {
+      console.log(value);
+    });
   }
 }
